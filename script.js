@@ -52,30 +52,12 @@ const THEME = {
   },
 };
 
-function removeFavicon() {
-  const favicon = document.querySelector("link[rel='icon']");
-  if (favicon) {
-    favicon.parentNode.removeChild(favicon); // Remove o elemento do DOM
-  }
-}
-
-function changeFavicon(iconURL) {
-  removeFavicon(); // Remove o favicon anterior
-
-  // Atualiza o favicon com o novo
-  const favicon = document.createElement("link");
-  favicon.rel = "icon";
-  favicon.href = iconURL;
-  favicon.type = "image/png"; // Ajuste o tipo conforme necessário
-  document.head.appendChild(favicon);
-}
-
 function changeTheme() {
   theme = theme === THEME.black ? THEME.white : THEME.black;
   for (const [key, value] of Object.entries(theme)) {
     document.documentElement.style.setProperty(`--${key}`, value);
   }; 
-  changeFavicon(`/image/${theme.ralsei}-favicon.ico`);
+  document.querySelector("link[rel='icon']").href = `./image/${theme.ralsei}-favicon.ico`;
 }
 
 window.onload = () => {

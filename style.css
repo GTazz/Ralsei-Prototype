@@ -22,7 +22,7 @@ body {
   padding: 50px;
   border: solid 5px;
   border-color: var(--boxBorder);
-  background: linear-gradient(0deg, var(--box), var(--box)), url('/image/box.jpg');
+  background: linear-gradient(0deg, var(--box), var(--box)), url('./image/box.jpg');
   background-size: contain;
   box-shadow: 
     inset 1px 1px 6px 3px rgba(0, 0, 0, 0.2),
