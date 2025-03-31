@@ -1,0 +1,128 @@
+/*-----Global-----*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+/*-----Box-----*/
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  justify-content: center;
+  padding: 50px;
+  border: solid 5px;
+  border-color: var(--boxBorder);
+  background: linear-gradient(0deg, var(--box), var(--box)), url('/image/box.jpg');
+  background-size: contain;
+  box-shadow: 
+    inset 1px 1px 6px 3px rgba(0, 0, 0, 0.2),
+    1px 1px 6px 3px rgba(255, 255, 255, 0.2);
+}
+
+.spriteBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-bottom: solid 1px var(--divBorder);
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+
+.buttonBox {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  flex-direction: column;
+}
+
+#spriteSheet {
+  margin: 50px;
+  padding-left: 16px;
+  image-rendering: pixelated;
+  object-fit: none;
+  object-position: 500px 500px;
+  scale: 3;
+  width: 64px;
+  height: 47px;
+  -webkit-user-drag: none;
+}
+
+/*-----Button-----*/
+
+.propertiesButton {
+  padding: 8px 20px;
+  margin: 3px;
+  border: solid 2px;
+  border-radius: 5px;
+  font-family: 'Pixelify Sans';
+  font-weight: 400;
+  font-size: 16px;
+  width: 150px;
+  cursor: pointer;
+}
+
+.button {
+  background-color: var(--animationButton);
+  border-color: var(--ButtonBorder);
+}
+
+.allButton {
+  background-color: var(--allAnimationsButton);
+  border-color: var(--ButtonBorder);
+}
+
+.themeButton {
+  background-color: var(--themeButtonText);
+  border-color: var(--themeButton);
+  color: var(--themeButton);
+}
+
+.whiteButtonText {
+  color: var(--buttonText);
+}
+
+/*-----Hover Button-----*/
+
+.themeButton:hover {
+  background-color: var(--themeButton);
+  border-color: var(--themeButtonText);
+  color: var(--themeButtonText);
+}
+
+.button:hover {
+  background-color: var(--animationButtonHover);
+}
+
+.allButton:hover {
+  background-color: var(--allAnimationButtonHover);
+}
+
+.propertiesButton:hover {
+  box-shadow: var(--themeButtonShadow) 0px 0px 5px 1px;
+}
+
+/*-----Focus Button-----*/
+
+.button:focus {
+  background-color: var(--animationButtonFocus);
+}
+
+.allButton:focus {
+  background-color: var(--allAnimationButtonFocus);
+}
+
+.teste{
+  color: #44475aef;
+  color: #44475a;
+}

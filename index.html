@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ralsei Prototype</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap"
+      rel="stylesheet"
+      />
+      <link rel="icon" type="image/x-icon" />
+  </head>
+  <body>
+    <!-- <img src="/image/box.jpg" alt="">
+    <img src="/image/fundo.jpg" alt=""> -->
+    <div class="container">
+      <div class="spriteBox">
+        <img
+          src="/image/spriteSheet.png"
+          alt="Ralsei Sprite Sheet"
+          id="spriteSheet"
+        />
+        <button class="themeButton propertiesButton" onclick="changeTheme()">Mudar Tema</button>
+      </div>
+      <div class="buttonBox">
+        <button class="allButton propertiesButton" onclick="ralseiAnimation('all')"><div class="whiteButtonText">Todos frames</div></button>
+        <button class="button propertiesButton" onclick="ralseiAnimation('normal')"><div class="whiteButtonText">Parar</div></button>
+        <button class="button propertiesButton" onclick="ralseiAnimation('shy')"><div class="whiteButtonText">Corar</div></button>
+        <button class="button propertiesButton" onclick="ralseiAnimation('jump')"><div class="whiteButtonText">Pular</div></button>
+        <button class="button propertiesButton" onclick="ralseiAnimation('spin')"><div class="whiteButtonText">Girar</div></button>
+        <button class="button propertiesButton" onclick="ralseiAnimation('fall')"><div class="whiteButtonText">Cair</div></button>
+        <button class="button propertiesButton" onclick="ralseiAnimation('land')"><div class="whiteButtonText">Pousar</div></button>
+        <button class="button propertiesButton" onclick="ralseiAnimation('getGun')"><div class="whiteButtonText">Armar</div></button>
+        <button class="button propertiesButton" onclick="ralseiAnimation('shooting')"><div class="whiteButtonText">Atirar</div></button>
+        <button class="button propertiesButton" onclick="ralseiAnimation('dropGun')"><div class="whiteButtonText">Desarmar</div></button>
+      </div>
+    </div>
+  </body>
+</html>
+<script src="script.js"></script>
+  
