@@ -223,8 +223,8 @@ body {
   --divBorder: #f0c0fd;
   --themeText: "Dark Mode";
   --gitHub: brightness(0);
-  --themeIcon: url("/image/moonDark.ico");
-  --themeIconHover: url("/image/moonLight.ico");
+  --themeIcon: url("./image/moonDark.ico");
+  --themeIconHover: url("./image/moonLight.ico");
 }
 
 /*-----Dark Theme-----*/
@@ -248,8 +248,8 @@ body {
     --divBorder: #8be9fd;
     --themeText: "Light Mode";
     --gitHub: brightness(1);
-    --themeIcon: url("/image/sunLight.ico");
-    --themeIconHover: url("/image/sunDark.ico");
+    --themeIcon: url("./image/sunLight.ico");
+    --themeIconHover: url("./image/sunDark.ico");
   }
 }
 
@@ -272,6 +272,6 @@ body {
   --divBorder: #8be9fd;
   --themeText: "Light Mode";
   --gitHub: brightness(1);
-  --themeIcon: url("/image/sunLight.ico");
-  --themeIconHover: url("/image/sunDark.ico");
+  --themeIcon: url("./image/sunLight.ico");
+  --themeIconHover: url("./image/sunDark.ico");
 }
