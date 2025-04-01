@@ -72,11 +72,9 @@ body {
 }
 
 .githubIcon{
-  max-width: 35px;
+  max-width: 25px;
   margin-right: 5px;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-  border-radius: 5px;
-
+  filter: var(--gitHub);
 }
 
 .githubLink{
@@ -122,6 +120,15 @@ body {
   border-color: var(--themeButton);
   color: var(--themeButton);
   width: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toggleIcon{
+  width: 20px;
+  margin-right: 10px;
+  content: var(--themeIcon);
 }
 
 .themeButton::after {
@@ -138,6 +145,9 @@ body {
   background-color: var(--themeButton);
   border-color: var(--themeButtonText);
   color: var(--themeButtonText);
+  .toggleIcon{
+    content: var(--themeIconHover);
+  }
 }
 
 .button:hover {
@@ -188,7 +198,10 @@ body {
   --box: #ffffffd7;
   --boxBorder: #ffffff;
   --divBorder: #f0c0fd;
-  --themeText: "Light Mode"
+  --themeText: "Dark Mode";
+  --gitHub: brightness(0);
+  --themeIcon: url("./image/moonDark.ico");
+  --themeIconHover: url("./image/moonLight.ico");
 }
 
 :root[data-theme="light"] {
@@ -208,7 +221,10 @@ body {
   --box: #ffffffd7;
   --boxBorder: #ffffff;
   --divBorder: #f0c0fd;
-  --themeText: "Light Mode"
+  --themeText: "Dark Mode";
+  --gitHub: brightness(0);
+  --themeIcon: url("./image/moonDark.ico");
+  --themeIconHover: url("./image/moonLight.ico");
 }
 
 /*-----Dark Theme-----*/
@@ -230,8 +246,10 @@ body {
     --box: #44475aef;
     --boxBorder: #8be9fd#bd93f9;
     --divBorder: #8be9fd;
-    --themeText: "Dark Mode"
-
+    --themeText: "Light Mode";
+    --gitHub: brightness(1);
+    --themeIcon: url("./image/sunLight.ico");
+    --themeIconHover: url("./image/sunDark.ico");
   }
 }
 
@@ -252,5 +270,8 @@ body {
   --box: #44475aef;
   --boxBorder: #8be9fd#bd93f9;
   --divBorder: #8be9fd;
-  --themeText: "Dark Mode"
+  --themeText: "Light Mode";
+  --gitHub: brightness(1);
+  --themeIcon: url("./image/sunLight.ico");
+  --themeIconHover: url("./image/sunDark.ico");
 }
