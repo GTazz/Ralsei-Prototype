@@ -129,6 +129,8 @@ body {
   width: 20px;
   margin-right: 10px;
   content: var(--themeIcon);
+  transition: 0.8s;
+  transition-delay: 0ms;
 }
 
 .themeButton::after {
@@ -147,6 +149,9 @@ body {
   color: var(--themeButtonText);
   .toggleIcon{
     content: var(--themeIconHover);
+    transform: rotate(45deg);
+    transition: 0.8s;
+    transition-delay: 0ms;
   }
 }
 
@@ -171,6 +176,8 @@ body {
 .allButton:focus {
   background-color: var(--allAnimationButtonFocus);
 }
+
+/*-----Pop up-----*/
 
 
 /*-----Responsive-----*/
