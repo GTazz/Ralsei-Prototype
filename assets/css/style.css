@@ -21,6 +21,26 @@ body {
   flex-direction: column;
 }
 
+h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Pixelify Sans';
+  font-weight: 600;
+  font-size: 30px;
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid var(--divBorder);
+  margin: 10px 0px;
+  padding: 0;
+}
+
 /*-----Container/Box-----*/
 
 .container {
@@ -218,6 +238,7 @@ body {
   --animationButtonFocus: #4ba085;
   --box: #ffffffd7;
   --boxBorder: #ffffff;
+  --text-color: black;
   --divBorder: #f0c0fd;
   --themeText: "Dark Mode";
   --iconsTheme: brightness(0);
@@ -244,6 +265,7 @@ body {
   --box: #44475aef;
   --boxBorder: #8be9fd#bd93f9;
   --divBorder: #8be9fd;
+  --text-color: white;
   --themeText: "Light Mode";
   --iconsTheme: brightness(1);
   --themeIcon: url("../icon/sun.ico");
