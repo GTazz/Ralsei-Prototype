@@ -21,10 +21,10 @@ const LANGUAGE = {
   },
 }
 
-function changeTheme() {
+const changeTheme = () => {
   theme = theme == "dark" ? "light" : "dark";
   document.documentElement.setAttribute("data-theme", theme);
-  document.querySelector("link[rel='icon']").href = `./image/${theme}Favicon.ico`;
+  document.querySelector("link[rel='icon']").href = `./assets/icon/${theme}Favicon.ico`;
 }
 
 let animation = RALSEI.normal;
@@ -40,16 +40,27 @@ const startAnimation = () => {
   }, 1000 / animation[2]);
 };
 
-
 const ralseiAnimation = (frames) => {
   animation = RALSEI[frames];
   frame = 0; 
   startAnimation(); 
 };
 
+const credits = (display = "") => {
+  if (display === "return") {
+    document.querySelector(".creditsEnable").style.display = "none";
+    document.querySelector(".creditsDisable").style.display = "";
+    return
+  }
+  document.querySelector(".creditsDisable").style.display = "none";
+  document.querySelector(".creditsEnable").style.display = "";
+}
+
+const loadPage = () => {document.body.style.display = "";}
 
 window.onload = () => {
-  theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-  document.querySelector("link[rel='icon']").href = `./image/${theme}Favicon.ico`   
-  startAnimation(); 
+  startAnimation();
+  theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "light" : "dark";
+  changeTheme();
+  loadPage();
 };

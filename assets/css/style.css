@@ -1,5 +1,8 @@
 :root {
   --animation: 0px;
+  --pd-s:10px;
+  --pd-m:20px;
+  --pd-l:30px;
 }
 
 /*-----Global-----*/
@@ -18,16 +21,18 @@ body {
   flex-direction: column;
 }
 
-/*-----Box-----*/
+/*-----Container/Box-----*/
 
 .container {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   justify-content: center;
+  height: 600px;
+  width: 425px;
   padding: 50px;
   border: solid 5px;
   border-color: var(--boxBorder);
-  background: linear-gradient(0deg, var(--box), var(--box)), url('./image/box.jpg');
+  background: linear-gradient(0deg, var(--box), var(--box)), url('../image/box.jpg');
   background-size: contain;
   box-shadow: 
     inset 1px 1px 6px 3px rgba(0, 0, 0, 0.2),
@@ -44,12 +49,26 @@ body {
   padding-bottom: 20px;
 }
 
+.creditsBox {
+  padding: var(--pd-s);
+}
+
 .buttonBox {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   justify-content: center;
   flex-direction: column;
 }
+
+.githubBox {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+}
+
+/*-----Images-----*/
 
 #spriteSheet {
   margin: 50px;
@@ -63,33 +82,11 @@ body {
   -webkit-user-drag: none;
 }
 
-.githubBox{
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  justify-content: center;
-  gap: 10px;
-  padding: 10px;
-}
-
-.githubIcon{
+.githubIcon {
   max-width: 25px;
   margin-right: 5px;
-  filter: var(--gitHub);
+  filter: var(--iconsTheme);
 }
-
-.githubLink{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: 'Pixelify Sans';
-  font-weight: 400;
-  font-size: 16px;
-  text-decoration: none;
-  color: var(--themeButton);
-  cursor: pointer;
-}
-
-
 
 /*-----Button-----*/
 
@@ -125,12 +122,13 @@ body {
   justify-content: center;
 }
 
-.toggleIcon{
+.toggleIconButton {
   width: 20px;
   margin-right: 10px;
   content: var(--themeIcon);
   transition: 0.8s;
   transition-delay: 0ms;
+  filter: var(--iconsTheme);
 }
 
 .themeButton::after {
@@ -141,14 +139,26 @@ body {
   color: var(--buttonText);
 }
 
+.link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Pixelify Sans';
+  font-weight: 400;
+  font-size: 16px;
+  text-decoration: none;
+  color: var(--themeButton);
+  cursor: pointer;
+}
+
 /*-----Hover Button-----*/
 
 .themeButton:hover {
   background-color: var(--themeButton);
   border-color: var(--themeButtonText);
   color: var(--themeButtonText);
-  .toggleIcon{
-    content: var(--themeIconHover);
+  .toggleIconButton{
+    filter: var(--iconHover);
     transform: rotate(45deg);
     transition: 0.8s;
     transition-delay: 0ms;
@@ -181,35 +191,16 @@ body {
 
 
 /*-----Responsive-----*/
+
 @media only screen and (max-width: 600px){
   .container {
     padding: 15px;
+    height: 540px;
+    width: 370px;
   }
 }
 
 /*-----Light Theme-----*/
-:root {
-  --ralsei: -47px;
-  --background: #f9e2ff;
-  --buttonText: white;
-  --themeButton: black;
-  --themeButtonText: white;
-  --buttonBorder: black;
-  --themeButtonShadow: #0000004d;
-  --allAnimationsButton: #ff3eb7;
-  --animationButton: #38705e;
-  --allAnimationButtonHover: #ff72cb;
-  --animationButtonHover: #4ba085;
-  --allAnimationButtonFocus: #ff72cb;
-  --animationButtonFocus: #4ba085;
-  --box: #ffffffd7;
-  --boxBorder: #ffffff;
-  --divBorder: #f0c0fd;
-  --themeText: "Dark Mode";
-  --gitHub: brightness(0);
-  --themeIcon: url("./image/moonDark.ico");
-  --themeIconHover: url("./image/moonLight.ico");
-}
 
 :root[data-theme="light"] {
   --ralsei: -47px;
@@ -229,36 +220,12 @@ body {
   --boxBorder: #ffffff;
   --divBorder: #f0c0fd;
   --themeText: "Dark Mode";
-  --gitHub: brightness(0);
-  --themeIcon: url("./image/moonDark.ico");
-  --themeIconHover: url("./image/moonLight.ico");
+  --iconsTheme: brightness(0);
+  --themeIcon: url("../icon/moon.ico");
+  --iconHover: brightness(1);
 }
 
 /*-----Dark Theme-----*/
-@media (prefers-color-scheme: dark){
-  :root {
-    --ralsei: 0px;
-    --background: #282a36;
-    --buttonText: black;
-    --themeButton: white;
-    --buttonBorder: black;
-    --themeButtonText: black;
-    --themeButtonShadow: #ffffff33;
-    --allAnimationsButton: #ff72cb;
-    --animationButton: #4ba085;
-    --allAnimationButtonHover: #ff9ddb;
-    --animationButtonHover: #68ccac;
-    --allAnimationButtonFocus: #ff9ddb;
-    --animationButtonFocus: #68ccac;
-    --box: #44475aef;
-    --boxBorder: #8be9fd#bd93f9;
-    --divBorder: #8be9fd;
-    --themeText: "Light Mode";
-    --gitHub: brightness(1);
-    --themeIcon: url("./image/sunLight.ico");
-    --themeIconHover: url("./image/sunDark.ico");
-  }
-}
 
 :root[data-theme="dark"] {
   --ralsei: 0px;
@@ -278,7 +245,7 @@ body {
   --boxBorder: #8be9fd#bd93f9;
   --divBorder: #8be9fd;
   --themeText: "Light Mode";
-  --gitHub: brightness(1);
-  --themeIcon: url("./image/sunLight.ico");
-  --themeIconHover: url("./image/sunDark.ico");
+  --iconsTheme: brightness(1);
+  --themeIcon: url("../icon/sun.ico");
+  --iconHover: brightness(0);
 }
