@@ -59,6 +59,12 @@ const credits = (display = "") => {
 const loadPage = () => {document.body.style.display = "";}
 
 window.onload = () => {
+  // if (navigator.language === "pt-BR") {
+  //   document.documentElement.setAttribute("lang", "pt-BR");
+  // } else {
+  //   document.documentElement.setAttribute("lang", "en");
+  // }
+
   startAnimation();
   theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "light" : "dark";
   changeTheme();
