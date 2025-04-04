@@ -307,13 +307,15 @@ hr {
 
 /*-----Languages-----*/
 
-/* :root[lang="pt-BR"] {
+:root[lang="pt-BR"] {
   --themeTextDarkLang: "Modo Escuro";
+  --themeTextLightLang: "Modo Claro";
 }
 
 :root[lang="en"] {
-  --themeTextDarkLang: "Modo Claro";
-} */
+  --themeTextDarkLang: "Dark Mode";
+  --themeTextLightLang: "Light Mode";
+}
 
 /*-----Light Theme-----*/
 
@@ -335,7 +337,7 @@ hr {
   --boxBorder: #ffffff;
   --text-color: black;
   --divBorder: #f0c0fd;
-  --themeText: "Dark Mode";
+  --themeText: var(--themeTextDarkLang);
   --iconsTheme: brightness(0);
   --themeIcon: url("../icon/moon.ico");
   --iconHover: brightness(1);
@@ -361,7 +363,7 @@ hr {
   --boxBorder: #8be9fd#bd93f9;
   --divBorder: #8be9fd;
   --text-color: white;
-  --themeText: "Light Mode";
+  --themeText: var(--themeTextLightLang);
   --iconsTheme: brightness(1);
   --themeIcon: url("../icon/sun.ico");
   --iconHover: brightness(0);

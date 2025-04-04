@@ -21,6 +21,11 @@ const LANGUAGE = {
   },
 }
 
+const changeLanguage = () => {
+  language = language === "pt-BR" ? "en" : "pt-BR";
+  document.html.style.lang = language;
+}
+
 const changeTheme = () => {
   theme = theme == "dark" ? "light" : "dark";
   document.documentElement.setAttribute("data-theme", theme);
@@ -59,12 +64,13 @@ const credits = (display = "") => {
 const loadPage = () => {document.body.style.display = "";}
 
 window.onload = () => {
-  // if (navigator.language === "pt-BR") {
-  //   document.documentElement.setAttribute("lang", "pt-BR");
-  // } else {
-  //   document.documentElement.setAttribute("lang", "en");
-  // }
-
+  language = navigator.language;
+  if (language === "pt-BR") {
+    document.documentElement.setAttribute("lang", "pt-BR");
+  } else {
+    document.documentElement.setAttribute("lang", "en");
+  }
+  
   startAnimation();
   theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "light" : "dark";
   changeTheme();
