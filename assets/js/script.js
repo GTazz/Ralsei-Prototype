@@ -13,17 +13,13 @@ const RALSEI = {
   dropGun: [41, 20, 12],
 };
 
-const LANGUAGE = {
-  ptBR: {
-    theme: "Mudar Tema",
-    dark: "Escuro",
-    light: "Claro",
-  },
-}
+const LANGS = [
+  "en",
+  "pt-BR",
+]
 
-const changeLanguage = () => {
-  language = language === "pt-BR" ? "en" : "pt-BR";
-  document.html.style.lang = language;
+const selectLang = (language) => {
+  document.documentElement.setAttribute("lang", language);
 }
 
 const changeTheme = () => {
@@ -64,11 +60,11 @@ const credits = (display = "") => {
 const loadPage = () => {document.body.style.display = "";}
 
 window.onload = () => {
-  language = navigator.language;
-  if (language === "pt-BR") {
-    document.documentElement.setAttribute("lang", "pt-BR");
+  let language = navigator.language;
+  if (LANGS.includes(language)) {
+    selectLang(language);
   } else {
-    document.documentElement.setAttribute("lang", "en");
+    selectLang("en");
   }
   
   startAnimation();

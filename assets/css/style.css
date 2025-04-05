@@ -1,3 +1,4 @@
+@import "./assets/css/language.css";
 :root {
   --animation: 0px;
   --pd-s:10px;
@@ -180,6 +181,11 @@ hr {
   filter: var(--iconsTheme);
 }
 
+.languagueIcon {
+  width: 30px!important;
+  filter: var(--iconsTheme);
+}
+
 .developer {
   margin: 0px 0px 5px 0px;
   width: 100px;
@@ -217,7 +223,7 @@ hr {
   background-color: var(--themeButtonText);
   border-color: var(--themeButton);
   color: var(--themeButton);
-  width: 160px;
+  width: 180px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -230,10 +236,6 @@ hr {
   transition: 0.8s;
   transition-delay: 0ms;
   filter: var(--iconsTheme);
-}
-
-.themeButton::after {
-  content: var(--themeText);
 }
 
 .whiteButtonText {
@@ -250,6 +252,41 @@ hr {
   text-decoration: none;
   color: var(--themeButton);
   cursor: pointer;
+}
+
+.languageButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  display: block;
+  position: absolute;
+  top: 3%;
+  left: 89%;
+  z-index: 1;
+}
+
+.dropdown-options {
+  display: none;
+  position: absolute;
+  overflow: auto;
+  right: 0%;
+  background-color:#fff;
+  border-radius:5px;
+  box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4);
+}
+
+.dropdown-options a {
+  display: block;
+  color: #000000;
+  padding: 5px;
+  font-family: 'Pixelify Sans';
+  font-weight: 400;
+  font-size: 14px;
+  text-decoration: none;
+  padding:8px 15px;
 }
 
 /*-----Hover Button-----*/
@@ -278,6 +315,16 @@ hr {
   box-shadow: var(--themeButtonShadow) 0px 0px 5px 1px;
 }
 
+.dropdown:hover .dropdown-options {
+  display: block;
+}
+
+.dropdown-options a:hover {
+  color: #0a0a23;
+  background-color: #ddd;
+  border-radius:5px;
+}
+
 /*-----Focus Button-----*/
 
 .button:focus {
@@ -303,68 +350,4 @@ hr {
     width: 370px;
     scale: 1;
   }
-}
-
-/*-----Languages-----*/
-
-:root[lang="pt-BR"] {
-  --themeTextDarkLang: "Modo Escuro";
-  --themeTextLightLang: "Modo Claro";
-}
-
-:root[lang="en"] {
-  --themeTextDarkLang: "Dark Mode";
-  --themeTextLightLang: "Light Mode";
-}
-
-/*-----Light Theme-----*/
-
-:root[data-theme="light"] {
-  --ralsei: -47px;
-  --background: #f9e2ff;
-  --buttonText: white;
-  --themeButton: black;
-  --themeButtonText: white;
-  --buttonBorder: black;
-  --themeButtonShadow: #0000004d;
-  --allAnimationsButton: #ff3eb7;
-  --animationButton: #38705e;
-  --allAnimationButtonHover: #ff72cb;
-  --animationButtonHover: #4ba085;
-  --allAnimationButtonFocus: #ff72cb;
-  --animationButtonFocus: #4ba085;
-  --box: #ffffffd7;
-  --boxBorder: #ffffff;
-  --text-color: black;
-  --divBorder: #f0c0fd;
-  --themeText: var(--themeTextDarkLang);
-  --iconsTheme: brightness(0);
-  --themeIcon: url("../icon/moon.ico");
-  --iconHover: brightness(1);
-}
-
-/*-----Dark Theme-----*/
-
-:root[data-theme="dark"] {
-  --ralsei: 0px;
-  --background: #282a36;
-  --buttonText: black;
-  --themeButton: white;
-  --buttonBorder: black;
-  --themeButtonText: black;
-  --themeButtonShadow: #ffffff33;
-  --allAnimationsButton: #ff72cb;
-  --animationButton: #4ba085;
-  --allAnimationButtonHover: #ff9ddb;
-  --animationButtonHover: #68ccac;
-  --allAnimationButtonFocus: #ff9ddb;
-  --animationButtonFocus: #68ccac;
-  --box: #44475aef;
-  --boxBorder: #8be9fd#bd93f9;
-  --divBorder: #8be9fd;
-  --text-color: white;
-  --themeText: var(--themeTextLightLang);
-  --iconsTheme: brightness(1);
-  --themeIcon: url("../icon/sun.ico");
-  --iconHover: brightness(0);
 }

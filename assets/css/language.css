@@ -1,0 +1,69 @@
+/*-----Portuguese-----*/
+:root[lang="pt-BR"] {
+  --txtLangPt: "Português";
+  --txtLangEn: "Inglês";  
+  --txtThemeDark: "Modo Escuro";
+  --txtThemeLight: "Modo Claro";
+  --txtAllFrames: "Todos";
+  --txtStanding: "Parado";
+  --txtBlushing: "Corar";
+  --txtJumping: "Pular";
+  --txtSpinning: "Girar";
+  --txtFalling: "Cair";
+  --txtLanding: "Aterrissar";
+  --txtGettingGun: "Pegar Arma";
+  --txtShooting: "Atirar";
+  --txtDroppingGun: "Desarmar";
+  --txtCredits: "Créditos";
+  --txtDevelopers: "Devs";
+  --txtAbout: "Sobre";
+  --txtArtists: "Créditos Extra";
+  
+  /* Long Texts */
+  --txtAboutP1: "Um texto qualquer explicando sobre o projeto e bla bla bla";
+}
+
+/*-----English-----*/
+:root[lang="en"] {
+--txtLangPt: "Portuguese";
+  --txtLangEn: "English";  
+  --txtThemeDark: "Dark Mode";
+  --txtThemeLight: "Light Mode";
+  --txtAllFrames: "All Frames";
+  --txtStanding: "Standing";
+  --txtBlushing: "Blush";
+  --txtJumping: "Jump";
+  --txtSpinning: "Spin";
+  --txtFalling: "Fall";
+  --txtLanding: "Land";
+  --txtGettingGun: "Get Gun";
+  --txtShooting: "Shoot";
+  --txtDroppingGun: "Drop Gun";
+  --txtCredits: "Credits";
+  --txtDevelopers: "Devs";
+  --txtAbout: "About";
+  --txtArtists: "Extra Credits";
+  
+  /* Long Texts */
+  --txtAboutP1: "Some text explaining about the project and bla bla bla";
+}
+
+.themeButton::after {content: var(--txtTheme)}
+.allButton::after {content: var(--txtAllFrames)}
+.standing::after {content: var(--txtStanding)}
+.shy::after {content: var(--txtBlushing)}
+.jump::after {content: var(--txtJumping)}
+.spin::after {content: var(--txtSpinning)}
+.fall::after {content: var(--txtFalling)}
+.land::after {content: var(--txtLanding)}
+.getGun::after {content: var(--txtGettingGun)}
+.shoot::after {content: var(--txtShooting)}
+.dropGun::after {content: var(--txtDroppingGun)}
+.txtCredits::after {content: var(--txtCredits)}
+.txtCredits::after {content: var(--txtCredits)}
+.txtDevelopers::after {content: var(--txtDevelopers)}
+.txtAbout::after {content: var(--txtAbout)}
+.txtArtists::after {content: var(--txtArtists)}
+.txtAboutP1::after {content: var(--txtAboutP1)}
+.txtLangEn::after {content: var(--txtLangEn)}
+.txtLangPt::after {content: var(--txtLangPt)}

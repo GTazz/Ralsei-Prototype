@@ -5,14 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ralsei Prototype</title>
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/language.css" />
+    <link rel="stylesheet" href="./assets/css/colorTheme.css" />
     <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet" />
     <link rel="icon" type="image/x-icon" />
   </head>
   <body style="display: none">
     <div class="container">
+      <div class="dropdown">
+        <button class="languageButton"><img class="languagueIcon" src="./assets/icon/language.ico" alt="Language Icon"></button>
+        <div class="dropdown-options">
+          <a class="txtLangPt" onclick="selectLang('pt-BR')"></a>
+          <a class="txtLangEn" onclick="selectLang('en')"></a>
+        </div>
+      </div>
       <div class="creditsEnable" style="display: none">
         <a class="link" target="_blank" onclick="credits('return')"><img class="returnIcon" src="./assets/icon/return.png" alt="Return Icon" /></a>
-        <h1>Developers</h1>
+        <h1 class="txtDevelopers"></h1>
         <hr />
         <div class="developerBox">
           <img class="developer" src="./assets/image/Tazz.jpeg" alt="" />
@@ -52,10 +61,10 @@
             </a>
           </div>
         </div>
-        <h1>About</h1>
+        <h1 class="txtAbout"></h1>
         <hr />
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-        <h1>Artist Credits</h1>
+        <p class="txtAboutP1"></p>
+        <h1 class="txtArtists"></h1>
         <hr />
       </div>
       <div class="creditsDisable">
@@ -67,38 +76,38 @@
         </div>
         <div class="buttonBox">
           <button class="allButton propertiesButton" onclick="ralseiAnimation('all')">
-            <div class="whiteButtonText">All Frames</div>
+            <div class="whiteButtonText"></div>
           </button>
-          <button class="button propertiesButton" onclick="ralseiAnimation('normal')">
-            <div class="whiteButtonText">Standing</div>
+          <button class="button propertiesButton standing" onclick="ralseiAnimation('normal')">
+            <div class="whiteButtonText"></div>
           </button>
-          <button class="button propertiesButton" onclick="ralseiAnimation('shy')">
-            <div class="whiteButtonText">Blushing</div>
+          <button class="button propertiesButton shy" onclick="ralseiAnimation('shy')">
+            <div class="whiteButtonText"></div>
           </button>
-          <button class="button propertiesButton" onclick="ralseiAnimation('jump')">
-            <div class="whiteButtonText">Jumping</div>
+          <button class="button propertiesButton jump" onclick="ralseiAnimation('jump')">
+            <div class="whiteButtonText"></div>
           </button>
-          <button class="button propertiesButton" onclick="ralseiAnimation('spin')">
-            <div class="whiteButtonText">Spinning</div>
+          <button class="button propertiesButton spin" onclick="ralseiAnimation('spin')">
+            <div class="whiteButtonText"></div>
           </button>
-          <button class="button propertiesButton" onclick="ralseiAnimation('fall')">
-            <div class="whiteButtonText">Falling</div>
+          <button class="button propertiesButton fall" onclick="ralseiAnimation('fall')">
+            <div class="whiteButtonText"></div>
           </button>
-          <button class="button propertiesButton" onclick="ralseiAnimation('land')">
-            <div class="whiteButtonText">Landing</div>
+          <button class="button propertiesButton land" onclick="ralseiAnimation('land')">
+            <div class="whiteButtonText"></div>
           </button>
-          <button class="button propertiesButton" onclick="ralseiAnimation('getGun')">
-            <div class="whiteButtonText">Getting Gun</div>
+          <button class="button propertiesButton getGun" onclick="ralseiAnimation('getGun')">
+            <div class="whiteButtonText"></div>
           </button>
-          <button class="button propertiesButton" onclick="ralseiAnimation('shooting')">
-            <div class="whiteButtonText">Shooting</div>
+          <button class="button propertiesButton shoot" onclick="ralseiAnimation('shooting')">
+            <div class="whiteButtonText"></div>
           </button>
-          <button class="button propertiesButton" onclick="ralseiAnimation('dropGun')">
-            <div class="whiteButtonText">Dropping Gun</div>
+          <button class="button propertiesButton dropGun" onclick="ralseiAnimation('dropGun')">
+            <div class="whiteButtonText"></div>
           </button>
         </div>
         <div class="creditsBox">
-          <a class="link" target="_blank" onclick="credits()">Credits</a>
+          <a class="link txtCredits" target="_blank" onclick="credits()"></a>
         </div>
       </div>
     </div>
